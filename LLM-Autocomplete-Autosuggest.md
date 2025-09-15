@@ -97,7 +97,7 @@ The extracted queries look like this:
 
  These are pretty nice! You can see that we have a query that incorporates the fact that this table has a French design, which would be hard (or impossible) with traditional NLP approaches and perhaps unlikely from a user query perspective.
 
-### 2) Auto-complete
+### 2) Auto-Complete
 
 The idea with auto-complete is that it matches the current query's prefix and returns the most likely ending to that result. This is a _very_ rudimentary prefix matcher for example purposes that doesn't bake in any notion of relevance apart from matching the prefix. I sorted from shortest to longest matches, but re-ranking by semantic similarity would be an interesting heuristic to use instead. You should almost certainly use your search engine's native capabilities for prefix matching.
 
@@ -120,7 +120,7 @@ def autocomplete(prefix: str, k: int = 5):
 prefix_index = generate_prefix_index(extracted_phrases)
 ```
 
-### Auto-suggest
+### 3) Auto-Suggest
 
 The idea with auto-suggest is that we don't have to match the user's query _exactly_. Instead, we try to find similar matches. If auto-complete works directly in the search bar, then auto-suggest is a dropdown of possible queries. Auto-suggest can be a good fallback for auto-complete when the user is being creative. The funny part about this is it's just an embedding + cosine similarity calculation, so it itself could be considered a basic search system. Latency and recall can be hard to balance here, especially when it really matters we serve quickly, but I could see a world in which this is actually a hybrid BM25 + vector similarity search system.
 
