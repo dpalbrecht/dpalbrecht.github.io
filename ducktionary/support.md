@@ -26,9 +26,13 @@ Games where you used a hint aren't submitted. You also need to be signed in to G
 Every day at midnight Pacific Standard Time (08:00 UTC). That's 1 am during daylight saving time. Everyone gets the same word at the same time.
 
 **Does undo affect my score?**
-No. Undo is unlimited and free.
+No. In normal games undo is unlimited and free. Hard as Duck mode has no undo (or hints): one mistake ends the game.
 
 **Where is my game history stored?**
 Only on your device. Deleting the app deletes your history.
+
+## Credits
+
+Puzzle difficulty ratings use word frequencies from [wordfreq](https://github.com/rspeer/wordfreq) by Robyn Speer, whose data is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 [Privacy Policy](/ducktionary/privacy/)
